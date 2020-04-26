@@ -5,7 +5,7 @@
         <product-list></product-list>
       </template>
       <template slot="cart">
-        Carrito
+        <cart></cart>
       </template>
     </shop-layout>
   </div>
@@ -15,10 +15,11 @@
 
 import ShopLayout from '@/components/ShopLayout'
 import ProductList from '@/components/ProductList'
+import Cart from '@/components/Cart'
 export default {
   name: 'App',
   components: {
-    ShopLayout, ProductList
+    ShopLayout, ProductList, Cart
   }
 }
 </script>
