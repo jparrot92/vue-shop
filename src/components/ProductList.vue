@@ -50,7 +50,7 @@ export default {
   methods: {
     ...mapActions('products', ['fetchProducts']),
     addProductToCart (product) {
-
+      console.log(product)
     }
   }
 }
