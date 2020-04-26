@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState, mapMutations } from 'vuex'
 import ProductItem from './ProductItem'
 export default {
   components: {
@@ -49,8 +49,9 @@ export default {
   },
   methods: {
     ...mapActions('products', ['fetchProducts']),
+    ...mapMutations('cart', ['addProduct']),
     addProductToCart (product) {
-      console.log(product)
+      this.addProduct(product)
     }
   }
 }
